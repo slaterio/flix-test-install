@@ -35,4 +35,13 @@ expect(page).to have_text(movie1.description[0..9])
 expect(page).to have_text(movie1.released_on)
 expect(page).to have_text("$318,412,101.00")
   end
+
+  it "does not show a movie that hasnt been released yet" do
+    movie = Movie.create(movie_attributes(released_on: 1.month.from_now))
+
+    visit movies_path
+
+    expect(page).not_to have_text(movie.title)
+  end
+
 end
