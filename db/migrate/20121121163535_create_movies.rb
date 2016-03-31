@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :rating
       t.decimal :total_gross
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
