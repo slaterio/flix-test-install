@@ -33,5 +33,11 @@ describe "Editing a movie" do
           
       expect(page).to have_text('error')
     end
+
+    it "updates the movie and shows the movie's updated details" do
+      ...
+      
+      expect(page).to have_text('Movie successfully updated!')
+    end
   
 end
