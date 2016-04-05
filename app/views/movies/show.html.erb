@@ -28,6 +28,10 @@
     <%= format_total_gross(@movie) %>
   </p>
   
+  <p>
+    <%= link_to 'List Reviews', movie_reviews_path(@movie) %>
+  </p>
+
   <footer>
     <nav>
       <%= link_to 'Edit', edit_movie_path(@movie), class: 'button' %>
